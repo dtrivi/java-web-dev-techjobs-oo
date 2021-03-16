@@ -1,5 +1,7 @@
 package org.launchcode.techjobs_oo.main;
 
+import java.util.ArrayList;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -18,12 +20,16 @@ public class Main {
 
 
 //        ignore and delete below
-//        Job sampleJobOne = new Job();
-//        Job sampleJobTwo = new Job();
-//
+        Job sampleJobOne = new Job("", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job sampleJobTwo = new Job("Product tester", new Employer(""), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
+        Job sampleJobThree = new Job("", new Employer(""), new Location(""), new PositionType(""), new CoreCompetency(""));
+//        Job sampleJobFour = new Job();
 //        System.out.println(sampleJobOne.getId());
 //        System.out.println(sampleJobTwo.getId());
-
+        System.out.println(sampleJobOne.toString());
+        System.out.println(sampleJobTwo.toString());
+        System.out.println(sampleJobThree.toString());
+//        System.out.println(sampleJobFour.toString());
     }
 
 }
