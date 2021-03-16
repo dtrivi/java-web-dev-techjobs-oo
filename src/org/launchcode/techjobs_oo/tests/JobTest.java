@@ -22,18 +22,22 @@ public class JobTest {
 //        assertEquals(true, true);
 //    }
 
+    // "Two objects are equal if the values they store are the same at the time of comparison. object1 and object2 point to different memory addresses, but their values are all the same. Thus, we can consider them equal, even though they are not identical."
     @Test
     public void testSettingJobId() {
 //        assertEquals(1, emptyJobOne.getId(), 1);
 //        assertEquals(2, emptyJobTwo.getId(), 1);
-        assertEquals(emptyJobOne.getId(), emptyJobTwo.getId(), 1);
+//        assertEquals(emptyJobOne.getId(), emptyJobTwo.getId(), 1);
+        assertFalse(emptyJobOne.getId() == emptyJobTwo.getId());
+//        assertTrue(emptyJobOne == emptyJobTwo);
     }
 
     @Test
     public void testJobConstructorSetsAllFields() {
         Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertTrue(testJob instanceof Job);
-        assertEquals(3, testJob.getId());
+        assertTrue(emptyJobOne.getId() != testJob.getId());
+        assertTrue(emptyJobTwo.getId() != testJob.getId());
         assertEquals("Product tester", testJob.getName());
         assertEquals("ACME", testJob.getEmployer().getValue());
         assertEquals("Desert", testJob.getLocation().getValue());
