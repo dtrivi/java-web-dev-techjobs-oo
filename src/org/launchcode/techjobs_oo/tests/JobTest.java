@@ -23,26 +23,14 @@ public class JobTest {
         testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
     }
 
-//    @Test
-//    public void emptyTest() {
-//        assertEquals(true, true);
-//    }
-
-    // "Two objects are equal if the values they store are the same at the time of comparison. object1 and object2 point to different memory addresses, but their values are all the same. Thus, we can consider them equal, even though they are not identical."
     @Test
     public void testSettingJobId() {
-//        assertEquals(1, emptyJobOne.getId(), 1);
-//        assertEquals(2, emptyJobTwo.getId(), 1);
-//        assertEquals(emptyJobOne.getId(), emptyJobTwo.getId(), 1);
-//        assertFalse(emptyJobOne.getId() == emptyJobTwo.getId());
-//        assertFalse(emptyJobOne.equals(emptyJobTwo));
         assertNotEquals(emptyJobOne, emptyJobTwo);
         assertEquals(emptyJobOne.getId() + 1, emptyJobTwo.getId());
     }
 
     @Test
     public void testJobConstructorSetsAllFields() {
-//        Job testJob = new Job("Product tester", new Employer("ACME"), new Location("Desert"), new PositionType("Quality control"), new CoreCompetency("Persistence"));
         assertTrue(testJob instanceof Job);
         assertTrue(emptyJobOne.getId() != testJob.getId());
         assertTrue(emptyJobTwo.getId() != testJob.getId());
@@ -62,19 +50,7 @@ public class JobTest {
 
     @Test
     public void testToStringBlankLine() {
-//        assertTrue(testJob.toString().equals("" + '\n' + testJob + '\n' + ""));
-//        assertTrue(testJob.toString() == "" + '\n' + testJob + '\n' + "");
-//        assertTrue(testJob.toString() ==
-//                "" + '\n' +
-//                "id: " + testJob.getId() + '\n' +
-//                "name: " + testJob.getName() + '\n' +
-//                "employer: " + testJob.getEmployer() + '\n' +
-//                "location: " + testJob.getLocation() + '\n' +
-//                "positionType: " + testJob.getPositionType() + '\n' +
-//                "coreCompetency: " + testJob.getCoreCompetency() + '\n' +
-//                "");
         assertEquals('\n', testJob.toString().charAt(0));
-//        assertEquals('\n', testJob.toString().charAt(117));
         assertEquals('\n', testJob.toString().charAt(testJob.toString().length() - 1));
     }
 

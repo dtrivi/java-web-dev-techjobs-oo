@@ -36,7 +36,6 @@ public class Job {
 
     @Override
     public String toString() {
-//        return '\n' + "" + '\n';
         if (name.equals("")) {
             name = "Data not available";
         }
